@@ -1,0 +1,21 @@
+URL:
+-----
+
+https://www.youtube.com/watch?v=LZFoktwiars&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY
+
+Topic Cover:
+-------------
+
+https://www.youtube.com/watch?v=pX6LufLso2M&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=10
+
+lecture goibg to start: 9, 
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+Define vector
+--------------
+	#define MAX 10
+	vector<int> arr(MAX) : int -> Type of array. arr --> Name of array  MAX --> Size of array define as a macro
+
+1> Diff between array and vector?
+Array size is fixed and decide at compile time. But vector size is not fixed size it can be change with "arr.resize(20)".
