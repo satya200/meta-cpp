@@ -19,3 +19,5 @@ Define vector
 
 1> Diff between array and vector?
 Array size is fixed and decide at compile time. But vector size is not fixed size it can be change with "arr.resize(20)".
+
+2> Inline function can not be recursive.
