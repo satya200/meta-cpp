@@ -12,7 +12,7 @@ int foo(int a = 2+5)
 
 int main()
 {
-	int a = 0, ret;
+	int a = 12, ret;
 	cout << "a = " << a << " &a = " << &a << endl;
 	ret = foo(a);
 	cout << "a = " << a << " &a = " << &a << "\nret = "<< ret <<endl;

@@ -8,7 +8,11 @@ Topic Cover:
 
 https://www.youtube.com/watch?v=pX6LufLso2M&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=10
 
-lecture goibg to start: 9, 
+https://www.youtube.com/watch?v=GtsBZ5e1-cE&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=12
+
+https://www.youtube.com/watch?v=N4gpIkQKUbc&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=15
+
+lecture goibg to start: 9, 10, 12, 14, 
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -21,3 +25,39 @@ Define vector
 Array size is fixed and decide at compile time. But vector size is not fixed size it can be change with "arr.resize(20)".
 
 2> Inline function can not be recursive.
+
+Reference:
+-----------
+1> This is the alias of a variable.
+	int a = 10;	Below Both the case a and b address is same.
+	int &b = a;
+
+	int &c; => Error becz there is no varibale for alias.
+
+2> int &j = 6 ==> Error becz we can not refer to constant But we can refer to const int &j = 6
+
+3> int &j = i + j ===> Error above resons const int &j = i + j
+
+4> NEVER EVER RETURN LOCAL VARIABLE REFERENCE.
+
+Default Paramter and Function Overloading:
+-------------------------------------------
+1> If we are not pasing any parameter at the time of call system will take default value mention in function declaration.
+
+2> i> All the parameter right of default parameter should be defaulted.
+	Ex: void foo(int, double = 1, char *) // Error becz char * shuld be defaulted
+	    void foo(int, double = 1, char * = NULL) //OK
+   ii> Default argument can not be redefind.
+	Ex: void foo(int, double = 1, char * = NULL) //OK
+	    void foo(int, double = 2, char * = NULL) //Error redefind
+   iii> All non-default parameter should mention at the time of function call.
+
+3> Always use default parameter in headerfile.
+
+4> Function Overloading is called static Polymerprisim
+
+5> Function Binding happen at compile time in function Overloading.
+
+6> In Function Overloading different return type in overloading function is not possible.
+
+7> 	
