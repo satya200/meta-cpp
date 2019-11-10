@@ -12,7 +12,11 @@ https://www.youtube.com/watch?v=GtsBZ5e1-cE&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 
 https://www.youtube.com/watch?v=N4gpIkQKUbc&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=15
 
-lecture goibg to start: 9, 10, 12, 14, 
+https://www.youtube.com/watch?v=lkFK2X6qIc0&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=18
+
+https://www.youtube.com/watch?v=6ki_W7cXdM0&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=22
+
+lecture goibg to start: 9, 10, 12, 14, 16, 21, 
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -60,4 +64,38 @@ Default Paramter and Function Overloading:
 
 6> In Function Overloading different return type in overloading function is not possible.
 
-7> 	
+Operator Overloading:
+----------------------
+1> Example: a + b  ===> operator+(a, b) ==> This defination type always user define not int, char, double etc
+	    c = a + b ===> operator= (c, operator+(a, b))
+
+2> New operator symbol can not be oveload. Only existing opeartor can overload.
+
+3> prefix operator Mytype& operator++(Mytype& s1)
+   postfix operator Mytype& operator++(Mytype& s1, int) ===> No need to pass any parameter in int place. this use to identyfy compiler.
+
+4> ::, ., *, sizeof, ternary can not be overloaded
+
+5> -> this overloading should return pointer. LATER WILL DISCUSS IN SMART POINTER
+
+Dynamic Memory Allocation:
+---------------------------
+1> int *p = new int (5) ==> Here new will allocate memory and initialize 5 to particular "p"\
+	If we don't want initilization only "int *p = new int" is sufficient.
+
+2> new and delete are operator. malloc is function.
+
+3> Array memory allocation: int *a = new int [3]; delete [] a;
+
+4> If we try to overload operator new below is the defination need to be follow.
+	void *operator new(size_t n)
+	{
+		--------
+	}
+Class and Object:
+------------------
+1> Object is the instances of class.
+
+
+
+
