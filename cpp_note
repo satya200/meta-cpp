@@ -8,15 +8,17 @@ Topic Cover:
 
 https://www.youtube.com/watch?v=pX6LufLso2M&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=10
 
-https://www.youtube.com/watch?v=GtsBZ5e1-cE&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=12
-
-https://www.youtube.com/watch?v=N4gpIkQKUbc&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=15
-
-https://www.youtube.com/watch?v=lkFK2X6qIc0&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=18
-
 https://www.youtube.com/watch?v=6ki_W7cXdM0&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=22
 
-lecture goibg to start: 9, 10, 12, 14, 16, 21, 
+https://www.youtube.com/watch?v=wtuks_f3vP4&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=24
+
+https://www.youtube.com/watch?v=jXTTOZUT1iU&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=27
+
+https://www.youtube.com/watch?v=apdzg2A90CI&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=30
+
+https://www.youtube.com/watch?v=gh51t49tKUQ&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=33
+
+lecture goibg to start: 9, 10, 12, 14, 16, 21, 23, 25, 29, 32
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -96,6 +98,95 @@ Class and Object:
 ------------------
 1> Object is the instances of class.
 
+Access Specifier:
+------------------
+1> This is use for hiding information. This is very strong concept in cpp.
 
+2> Default class datamembers are private.
 
+3> public is use for interface and private is use for implementation.
 
+4> Mostly ".h" file is called interface and every body needs to be known. Implementation will go in different file .cpp. And application only use ".h" file which is called interface.
+
+Constructure, Destructure:
+---------------------------
+1> Object come to life fom execution of constructer body and destroy from destoctor sequnce.
+
+Copy Constructure:
+------------------
+
+1> Data members initialization happen according to the order it define inside class not the order it intialize in constructure.
+
+2> PLEASE NOTE ABOVE CONDITION BECZ IT WILL VERY HELPFUL FOR OUTPUT. SO MAIN RULE IS ORDER OF DATA MEMEBR PRESENT INSIDE CLASS AND AT THE TIME OF INITILIZATION IN CONSTRUCTURE ORDER SHOULD BE SAME. 
+
+3> For more info check sample program file name "const_order.cpp"
+
+4> And the Destructure order is equaly opposite order.
+
+5> Syntax of Copy constructure: Complex:: Complex(const Complex &)
+
+6> Invokation Of Copy Constructure: c2(c1) or c3 = c2;
+
+7> Why Copy Constructure Required?
+   i> At the time of user define(class created by user) call-by-value this is required becz we can't pass value without copy.
+   ii> 
+
+8> We can not pass object as call-by-value in copy constructure.
+
+9> Copy Assignment Operator ==> This required when 2 or more than objects are already define
+	syntax: invoking c2 = c3;
+	Defination: Complex& operator=(const Complex& c)
+	{
+		if (this != &c)
+		{
+			free(c); // This is required for avoide memory leak. becz c will not frred up once this function returnd.
+			// Procede now becz this condition will help for self assignmate object. Ex c1 = c1;
+		}
+		-------------
+	}
+	Why need & at the time of return? Because chain assignment is possible c1 = c2 = c3.
+
+10> If user does not provide copy consructure compile will provide free copy constructure. And it is just bit copy. Always advise to provide copy consructure. 
+
+11> SHALLOW COPY COPIES THE POINTER BUT DEEP COPY ONLY COPY POINTED VALUE.
+
+Const-ness:
+-----------
+1> User define object can be mention as const. If we make this const the member of object can not be change.
+	Ex:- const Myclass * const this; ==> Const pointer to const object
+	     Myclass * const this; =====> Const pointer to Non-constant object
+
+2> To access member using const object we need to provide const member functions.
+	Ex:- void print() const
+	     {
+		--------------
+	     }
+
+3> If datamembers are const it can not change at all. The value is assign at the time of initialization.
+
+4> mutable(It means it can change) is use if object is declare as const in that case only mutable data member can change but all other data member can not be change.
+
+5> mutable is only applicable for data member not variable.
+
+6> Reference data member can not be declare as mutable.
+
+7> static and const data member can not be declare as mutable.
+
+8> Syntax: class x {
+			mutable int a;
+		};
+
+Static Members:
+----------------
+1> static data member is only created one and share commonly all instances.
+
+2>static data member is constructed before main() function starts and destructed after main () ends.
+
+3> static member function:
+	i> Does not have this pointer.
+	ii> can not access non-static data members.
+	iii> can not invoke non-static memberfunction.
+	iv> it will access using class name :: operator.
+	v> Can not declare as const becz it does not have this pointer.
+
+4> 
