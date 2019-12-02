@@ -5,6 +5,7 @@ using namespace std;
 
 bool compare(int i, int j)
 {
+	//cout << i << j << endl;
 	return (i > j);
 }
 
