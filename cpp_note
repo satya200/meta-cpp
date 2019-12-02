@@ -18,7 +18,9 @@ https://www.youtube.com/watch?v=apdzg2A90CI&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 
 https://www.youtube.com/watch?v=gh51t49tKUQ&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=33
 
-lecture goibg to start: 9, 10, 12, 14, 16, 21, 23, 25, 29, 32
+https://www.youtube.com/watch?v=DOhMUTHrdJI&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=36
+
+lecture going to start: 9, 10, 12, 14, 16, 21, 23, 25, 29, 32, 35
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -189,4 +191,53 @@ Static Members:
 	iv> it will access using class name :: operator.
 	v> Can not declare as const becz it does not have this pointer.
 
-4> 
+
+Friend Function:
+-----------------
+1> A friend function of a class has access to private and protected data member of class.
+
+2> Must have to include prototype inside the scope of class mention key word friend.
+
+3> This feature required when i want to access 2 or more different classes private data member.
+
+Operator Overloading For User define:
+--------------------------------------
+1> Post increment will use retun by value.
+	Basic implementation: 
+		Myclass operator++(int)
+        {
+                Myclass t(data);// Here data has to be assign to temp varibale.
+                // Any opeartion //
+                return t;
+        }
+
+2> Pre increment is retun by reference and ii always return same object means this pointer
+	Basic implementation:
+		Myclass& operator++()
+        {
+                // Any Operation //
+                return *this;// Here this has to be return this pointer
+        }
+
+3> explicit is use befpre member function to inform compiler to not to do any casting.
+
+Overloading of cout and cin.
+-----------------------------
+1>
+Complex d1, d2; 
+cout << d1 << d2;
+
+1>The signature of operator global function
+	ostream& operator<< (ostream& os, const Complex &a);
+
+2>Member function in ostream
+	ostream& ostream::operator<< (const complex &a);
+
+3>Member function in Complex
+	ostream& Complex::operator<< (ostream& os);
+
+https://www.youtube.com/watch?v=JPtXZblI1sg&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=35  ==> URL is very much help full
+
+THIS COUT AND CIN IS NOT POSSIBLE TO OVELOAD. ONLY PT 1 IS POSSIBLE BUT IT WILL NOT ACCORDING TO THE ENCAPSULATION SO BETTER USE FRIEND FUNCTION. PT 2 IS NOT POSSIBLE BECZ OSTREAM IS STANDARD C++ LIB OBJECT WE CAN NOT ADD ANYTHING. IN PT 3 WILL WORK IF I WILL RIGHT (D1 << COUT) BUT IT WILL NOT LOOKES GOOD BECZ THIS IS NOT THE STANDARD C++ SYNTAX FOR COUT.
+
+
