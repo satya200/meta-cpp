@@ -20,6 +20,8 @@ https://www.youtube.com/watch?v=gh51t49tKUQ&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 
 https://www.youtube.com/watch?v=DOhMUTHrdJI&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=36
 
+https://www.youtube.com/watch?v=3nHPN05sqB0&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=39
+
 lecture going to start: 9, 10, 12, 14, 16, 21, 23, 25, 29, 32, 35
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -240,4 +242,100 @@ https://www.youtube.com/watch?v=JPtXZblI1sg&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 
 THIS COUT AND CIN IS NOT POSSIBLE TO OVELOAD. ONLY PT 1 IS POSSIBLE BUT IT WILL NOT ACCORDING TO THE ENCAPSULATION SO BETTER USE FRIEND FUNCTION. PT 2 IS NOT POSSIBLE BECZ OSTREAM IS STANDARD C++ LIB OBJECT WE CAN NOT ADD ANYTHING. IN PT 3 WILL WORK IF I WILL RIGHT (D1 << COUT) BUT IT WILL NOT LOOKES GOOD BECZ THIS IS NOT THE STANDARD C++ SYNTAX FOR COUT.
 
+NAME SPACE:
+------------
+1> Example:
+	namespace Myname {
+        int data;
+        void foo()
+        {
+                cout << "In side foo" << endl;
+        }
+        class Myclass {
+                int data;
+        public:
+                Myclass(int d) : data(d)
+                {
+                }
+                void display()
+                {
+                        cout << "In side display()" << endl;
+                }
+        };
+}
 
+int main()
+{
+        Myname::data = 10;
+        cout << "Myname data = "<< Myname::data << endl;
+        Myname::foo();
+        Myname::Myclass obj(10);
+        obj.display();
+        return 0;
+}
+
+2> This feature is use if 2 function having same name we can put function inside 2 different namespace
+
+3> DIFFERENCE BETWEEN NAMESPACE AND CLASS
+	i> Every namespace is not a class but every class define a namespace.
+	ii> A namespace can be reopend and we can added member into it but class can not reopen.
+	iii> No instance of namespace is created but class can create multiple instances.
+	iv> A namespace can be un-named but un name class is not allowed.
+
+4> C++ support varity of scopes
+	i> Expression scope: Mostly used by compiler.
+	ii> Block Scope.
+	iii> Function Scope.
+	iv> Class Scope
+	v> Namespace Scope.
+	vi> File Scope.
+	vii> Global Scope : Idenified by ::
+
+Mostly use namespace for writting Libreary like std.
+
+INHERITANCE:
+-------------
+https://www.youtube.com/watch?v=YraxnPsxZgc&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=37
+
+1> Single Inheritance:
+-----------------------
+	Manager =====> Employee
+	class Employee;		// Base class
+	class Manager : public Employee  // Derive Class
+
+2> Two Wheeler is a vechile and Three Wheeler is a vechile called hybrid inheritance.
+	class vechile;		// Base class or root class
+	class Twowheeler : public vechile	//Derived class = Two Wheeler
+	class Threewheeler : public vechile	//Derived class = Three Wheeler
+
+3> Red Rose is Rose is Flower [Multi-Level Inheritance]
+	class flower;	//Base class
+	class Rose : public Flower	//Derive class
+	class Red Rose : public Rose	//Derive class
+
+4> Derive is Base
+	clase Base;
+	class Derive : public Base;
+
+5> Data Members:
+-----------------
+	i> Derive class inherits all data members of base class. But it can add further more data member in its own
+
+6> Member Functios:
+--------------------
+	i> Derive class inherits all member function of base class.
+	ii> Derive class may override 	a member function of base class by redefine it with same signature.
+	iii> Derive class may overload a member function of base class by redefining it with same name but different signature.
+	iv> static and friend member function can not be inherited.
+
+7> Access Specifier:
+---------------------
+	i> Derive class can not access private member of base class.
+	ii> Derive class can access protected member of base class.
+
+8> Construction And Destruction:
+--------------------------------
+	i> A Constructure/Destructure of derived class must fast call Constructure/Destructure of base class to Constructure/Destructure base class instance of the derive class.
+
+9> 
+	
