@@ -22,6 +22,10 @@ https://www.youtube.com/watch?v=DOhMUTHrdJI&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 
 https://www.youtube.com/watch?v=3nHPN05sqB0&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=39
 
+https://www.youtube.com/watch?v=fAiaNjbWsDM&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=41
+
+https://www.youtube.com/watch?v=ZMKnEsTxN6w&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=42
+
 lecture going to start: 9, 10, 12, 14, 16, 21, 23, 25, 29, 32, 35
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -337,5 +341,23 @@ https://www.youtube.com/watch?v=YraxnPsxZgc&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 --------------------------------
 	i> A Constructure/Destructure of derived class must fast call Constructure/Destructure of base class to Constructure/Destructure base class instance of the derive class.
 
-9> 
+9> Private Inheritance:
+------------------------
+	i> class Base;
+	   class Derived : private base;
+	ii> Compiler convert derived class object to base class object if the inheritance relationship is public.
+	iii> Compiler will not convert derived class object to base class object if the inheritance relationship is public.
+
+10> Protected Inheritance:
+---------------------------
+	i> It Still under discussion. There is no specific design present.
+
+11> Visibility matrix:
+-----------------------
+	i> In case of visibility which one is more restricted that one is the result. If inheritance is public member is private so resultan is private.
 	
+12> SO MOSTLY PRIVATE INHERITANCE IS REQUIRED WHERE DERIVE CLASS WANTED TO ACCESS BASE CLASS USING PRIVATE. IN STATE OF DECLARING OBJECT AS PRIVATE BETTER TO USE PRIVATE INHERITANCE. EX: CHECK 5.CPP AND 6.CPP. MOSTLY USE IN POLYMERPRISIM.
+
+DYNAMIC BINDING:
+-----------------
+1> 
