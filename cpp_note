@@ -360,4 +360,18 @@ https://www.youtube.com/watch?v=YraxnPsxZgc&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 
 DYNAMIC BINDING:
 -----------------
-1> 
+1> class A {};
+   class B : public A {};
+   A *pa = 0;
+   B *pb = 0;
+   void *pv = 0;
+   pa = pb; Okay becz uper type cast. pa will get some part from pb becz in pb already pa present due to base class.
+   pb = pa; Error becz downside cast.
+
+2> UPCAST is safe and DOWNCAST is risky.
+
+3> For example please check "/home/nullbyte/cpp/learning_cpp/meta-cpp/inheritance/staic_dynamic.cpp" file
+
+4> Static Binding invoke function is depends on the type of pointer but dynamic binding depends on the pointer pointing to the object to invoke function. This difference we can observe only if object is pointer type.
+
+5> We should use virtual in function defination for dynamic binding. And the bind will happen at the run time but static bind will happen at the compile time.
