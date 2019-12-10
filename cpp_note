@@ -26,6 +26,8 @@ https://www.youtube.com/watch?v=fAiaNjbWsDM&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 
 https://www.youtube.com/watch?v=ZMKnEsTxN6w&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=42
 
+https://www.youtube.com/watch?v=TF5mzUmAza4&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=44
+
 lecture going to start: 9, 10, 12, 14, 16, 21, 23, 25, 29, 32, 35
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -375,3 +377,21 @@ DYNAMIC BINDING:
 4> Static Binding invoke function is depends on the type of pointer but dynamic binding depends on the pointer pointing to the object to invoke function. This difference we can observe only if object is pointer type.
 
 5> We should use virtual in function defination for dynamic binding. And the bind will happen at the run time but static bind will happen at the compile time.
+
+https://www.youtube.com/watch?v=HFeIaDqjyH4&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=43
+
+6> Static Binding:
+------------------
+	i> When a function invocation bindes to fun defination based on static type is called static Binding.
+	ii> This will happen at compile time.
+	iii> Normal Function call, Fun Over loading and over loaded operator are the example of this and this is called early binding.
+
+7> Dynamic Binding:
+-------------------
+	i> When a function invocation bindes to fun defination based on dynamic type is called dynamic Binding.
+	ii> This is done at run time.
+	iii> Function Pointer and virtual function example of late binding.
+
+8> Dynamic Binding possible only for pointer and reference object.
+
+9> 
