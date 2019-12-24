@@ -28,6 +28,8 @@ https://www.youtube.com/watch?v=ZMKnEsTxN6w&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 
 https://www.youtube.com/watch?v=TF5mzUmAza4&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=44
 
+https://www.youtube.com/watch?v=QZu133Opz9U&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=45
+
 lecture going to start: 9, 10, 12, 14, 16, 21, 23, 25, 29, 32, 35
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -394,4 +396,23 @@ https://www.youtube.com/watch?v=HFeIaDqjyH4&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 
 8> Dynamic Binding possible only for pointer and reference object.
 
-9> 
+9> Destructure is always virtual. If u make destucture(any common function) virtual in base class no need to do virtual in derive class. Because it is automatic virtual.
+
+PURE VIRTUAL FUNCTION: A virtual function which may not have body only signature. It may body of common part
+-----------------------
+1> If an class contains at least one pure virtual function is called Abstract base class.
+
+2> Pue Virtual function may inherited or define in class.
+
+3> No instance or object can be created for Abstarct base class. Because it contains pure virtual function which does not have body. So if i create instance or object using object i can invoke pure virtual function which does not have defination or body, which will cause issue.
+
+4> Naturally it does not have constructure and destrucure.
+
+5> Data members in Abstract base class should protected. But public and private also no issue.
+
+6> A Concreate Class must override and implement all pure virtual function So that it can be instantiated.
+
+7> Ex:
+	virtual f() = 0  ==> Pure virtual function (=0) is means compiler knows it is pure virtual function
+
+8> 
