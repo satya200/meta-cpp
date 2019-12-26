@@ -32,6 +32,14 @@ https://www.youtube.com/watch?v=QZu133Opz9U&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 
 https://www.youtube.com/watch?v=qtKLNlB-p-w&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=46
 
+https://www.youtube.com/watch?v=iTGH6qSCy2I&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=54
+
+https://www.youtube.com/watch?v=hrJ-DSrmuJc&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=49
+
+https://www.youtube.com/watch?v=SWavU8klosU&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=51
+
+//Pending Template as well
+
 lecture going to start: 9, 10, 12, 14, 16, 21, 23, 25, 29, 32, 35
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -417,4 +425,69 @@ PURE VIRTUAL FUNCTION: A virtual function which may not have body only signature
 7> Ex:
 	virtual f() = 0  ==> Pure virtual function (=0) is means compiler knows it is pure virtual function
 
-8> 
+VIRTUAL FUNCTION TABLE:
+-------------------------
+
+https://www.youtube.com/watch?v=wwgGygjeBbo&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=47
+
+1> In this module we discuss how polymerprism work using virtual function table.
+
+2> When ever a class define virtual function a hidden memeber  variable is added to class which is point to array of pointers of virtual function functions called VIRTUAL FUNCTION TABLE(VFT).
+
+3> VFT pointers is use to call at run time because at compile time he do't know either derived class or base class function need to be call.
+
+4> VFT is class specific all instances of class has same VFT.
+
+5> VFT carries run time type information of object.
+
+
+ECEPTION AND ERROR HANDELING:
+------------------------------
+1> setjump() and longjump() are use for jump from one function to another function which is not possible in goto.
+
+2>  try block must have catch block. Even in nesting try block must have catch block.
+
+3> excepsion object(means object present in catch defination) are auto matic type but the life tims is upto program end. And life will start from when exception start. And this object is present in heap not in stack.
+
+TYPE CASTING:
+--------------
+1> Casting may sense in case of releted class means inheritance is ok. Agian here 2 type of casting upcast(OK) and downcast(Not Ok).
+	class A {};
+	class B : public A{};
+	A *pa;
+	B *pb;
+	void *pv = NULL;
+	pa = pb; //OK becz upcast
+	pb = pa; // NOT OK becz downcast
+	
+
+2> In C++ have 4 cast operator to do casting.
+	a> const-cast  ==> It does not work with function pointer
+	b> static-cast
+	c> reinterpret cast ==> NOT to use becz it is very dangerius
+	d> dynamic-cast
+
+3> syntax:
+----------
+	cast type <Target type> <varible name>
+
+b> static-cast:
+----------------
+1> It performs all conversions allowed implicitly(not only those pointer to class) and also opposit of these. Convert from void * to any pointer type. Convert integer, floating point value and enum to enum type.
+
+2> Here both upcast and down-cast possible. But down-cast will not check anything thats why it is very dangories to use.
+
+3> It will do at he compile time.
+
+c> dynamic-cast: Mostly it use in polymerpic haraky
+-----------------
+1> It has to work with pointer or refernce. Not work with varible or object
+
+2> It purpose is to ensure that the result of type conversion points to valid complete object of destination type.
+
+3> This will work both upcast and downcast polymerfic classes if and only if pointed object is valid. But in downcast if pointer is not valid it will return NULL.
+
+4> THIS WILL WORK IN POLYMERFIC CASE ONLY.
+
+5> 
+
