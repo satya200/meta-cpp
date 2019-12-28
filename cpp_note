@@ -38,6 +38,10 @@ https://www.youtube.com/watch?v=hrJ-DSrmuJc&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IU
 
 https://www.youtube.com/watch?v=SWavU8klosU&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=51
 
+https://www.youtube.com/watch?v=ftWo7XprG5k&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=55
+
+https://www.youtube.com/watch?v=MNoPTVrsXZs&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY&index=56
+
 //Pending Template as well
 
 lecture going to start: 9, 10, 12, 14, 16, 21, 23, 25, 29, 32, 35
@@ -491,3 +495,39 @@ c> dynamic-cast: Mostly it use in polymerpic haraky
 
 5> 
 
+MULTIPLE INHERITANCE:
+----------------------
+1> One derive class having multiple base class.
+
+2> Multiple inheritance is called Diamond Hierachy.
+
+3> class base1;
+   class base2;
+   class derive: public base1, public base2 -----> We can have multiple base class.
+4> static member function and friend fun are not inherited from base class.
+
+5> Derive class inherits all constructure and destucture of base classes but in different semantics.
+
+6> Derived class can not override or overload a constructure or destructure of any base class.
+
+7> A constructure of derive class must first call all consructers of base classes to construct the base class instances of derive class.
+
+8> base class constructure are called in listing order.
+
+9> The destructure of derive class must call the destructure of base class.
+
+10> 
+
+TEMPLATE:
+----------
+1> Main purpose of this methode is to make code generic and the code will generate at compile time which make other program.
+
+2> Templates are specification of a collection of functions and classes which are parameterise by types. So template is mustly depend on parameter by type.
+
+3> This is mainly use of code reuse.
+
+4> In function we can mention multiple parameter means function will support multiple type of parameter.
+
+5> In template we can provide multiple defination of a function using template specialization but macro it is not possible.
+
+6> 
