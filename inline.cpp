@@ -4,6 +4,7 @@ using namespace std;
 
 inline int ADD(int a, int b)
 {
+	//ADD(1,2); // Inline should not be recursive
 	cout << "In add" << endl;
 	return (a + b);
 }

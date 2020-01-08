@@ -48,6 +48,17 @@ lecture going to start: 9, 10, 12, 14, 16, 21, 23, 25, 29, 32, 35
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
+Inline Function:
+-----------------
+1> Compiler will replace inline function where function call happen. But it is not compolsery to do. It is fully depend on compiler either inline will happen or not.
+
+2> Here type check parameter in robust but in macro this is not present.
+
+3> Error check and debug is possible in inline function which is not possible in Macros.
+
+4> Inline function should not be recursive.
+
+5> 
 Define vector
 --------------
 	#define MAX 10

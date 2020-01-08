@@ -28,6 +28,11 @@ int& ret_ref(int& a)
 	cout << "In foo() a=" << a << " , &a=" << &a << endl;
 	return (a);
 }
+
+int foo(int& a)
+{
+	cout << "In foo()=" << a << endl;
+}
 int main()
 {
 	int a = 10, ret;
@@ -45,7 +50,8 @@ int main()
 	/* To avoide above error we have to use const reference 
 	* But if function return type is reference in that case const is opetional.*/
 	//const int& re = ret_ref(b);
-	int& re = ret_ref(b);
-	cout << "ret = " << re << " &ret = " << &re <<" b = " << b << " &b = " << &b << endl;
+	//int& re = ret_ref(b);
+	//cout << "ret = " << re << " &ret = " << &re <<" b = " << b << " &b = " << &b << endl;
+	foo(1); // Error becz foo() argument is not const
 	return 0;
 }
