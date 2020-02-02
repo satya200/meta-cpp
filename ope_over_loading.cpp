@@ -32,7 +32,9 @@ int main()
 {
 	Myclass obj(10);
 	obj.disp();
-	Myclass obj1 = obj++;
+	//Myclass obj1(1);// = obj++;
+	Myclass obj1(1) = obj++;
+	obj++;
 	cout << "After post increment" << endl;
 	obj1.disp();
 	obj.disp();

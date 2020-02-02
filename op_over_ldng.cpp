@@ -22,5 +22,6 @@ int main()
 	//int x = 10, y = 20;
 	int ret;
 	ret = x + y;
+	cout << ret << endl;
 	return 0;
 }
