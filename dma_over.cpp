@@ -16,6 +16,7 @@ void* operator new [] (size_t size, char setv)
 {
 	cout << "In new operator()" << endl;
 	void *p = operator new (size);
+	//void *p =  new char (size);
 	memset(p, setv, size);
 	return p;
 }
@@ -27,7 +28,8 @@ int main()
 	//cout << *p << endl;
 	//delete p;
 	char *t = new ('#') char[10];
-	cout << *t << endl;
+	t[5] = 'Z';
+	cout << *t << t[5] << endl;
 	delete [] t;
 	return 0;
 }
